@@ -19,7 +19,7 @@ The use of the Dijkstras algorithm, to determine the shortest path, is **not** a
 
 ## Recursive Functions
 
-Recursive functions are **important** for *cyclining* through **all** elements in the tree.  This is because the `depth` of nodes and all decendants **will** be different.  *This is the **advantage** that DAG provides.*
+Recursive functions are **important** for *cyclining* through **all** elements in the tree.  This is because the `depth` of nodes and all decendants **will** be different.  *This is the **advantage** that DAG provides, you're not locked into a strict level of hierarchies.*
 
 ```
 .
