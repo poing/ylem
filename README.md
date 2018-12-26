@@ -105,6 +105,16 @@ php artisan db:seed --class=Ylem\\Database\\Seeds\\StubSeeder
 ```
 7. Open `/ylem` in a browser.
 
+### Stub Model and Data
+
+You will see the random data *associated* to `Ylem\Models\Stub`.  This is simply a test table, once *seeded*, it can be used to *examine* the relationships.  Faker is used to create: Company Name, JOB TITLE, and People Name.
+
+```php
+$faker->company
+└── strtoupper($faker->jobTitle)
+    └── $faker->name
+```
+
 ### php artisan tinker
 Here are some `tinker` commands to check out:
 
