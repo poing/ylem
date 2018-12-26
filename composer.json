@@ -1,0 +1,37 @@
+{
+  "name": "poing/ylem",
+  "description": "ylem /ˈiːlɛm/ - noun - (in the Big Bang theory) the primordial matter of the universe, originally conceived as composed of neutrons at high temperature and density.",
+  "keywords": [],
+  "homepage": "",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Brian LaVallee",
+      "email": "brian.lavallee@invite-comm.jp"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "illuminate/config": "~5.0",
+    "illuminate/support": "~5.0",
+    "gazsp/baum": "~1.1",
+    "doctrine/dbal": "^2.9"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ylem\\": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Baum\\Providers\\BaumServiceProvider",
+                "Ylem\\Providers\\YlemServiceProvider"
+            ]
+        }
+    }
+}
