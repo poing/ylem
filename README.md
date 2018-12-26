@@ -5,7 +5,7 @@
 # ylem
 This is an implementation of the TMF632 Party Management API REST Specification in Laravel.  Supporting Individual, Organization, & Organizational Unit relational hierarchies.  
 
-* [Quick Start](##-Quick-Start)
+* [Quick Start](#quick-start)
 
 Like the primordial substance from which all matter is formed, this is *intended* as the **core** application fabric for business and consumer interaction.
 
