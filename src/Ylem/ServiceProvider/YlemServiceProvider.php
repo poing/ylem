@@ -82,10 +82,12 @@ class YlemServiceProvider extends ServiceProvider {
     private function handleMigrations() {
     
         //$this->command->info('Creating migrations.');
-
+        $this->loadMigrationsFrom(__DIR__.'/database/migrations');
+        /*
         $this->publishes([
             __DIR__ . '/database/migrations' => base_path('database/migrations')
         ]);
+        */
     }
 
     private function handleRoutes() {
