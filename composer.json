@@ -31,10 +31,7 @@
             "providers": [
                 "Baum\\Providers\\BaumServiceProvider",
                 "Poing\\Ylem\\ServiceProvider\\YlemServiceProvider"
-            ],
-            "aliases": {
-                "Ylem": "Poing\\Ylem\\Facade"
-            }
+            ]
         }
     }
 }

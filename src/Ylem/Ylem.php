@@ -9,6 +9,8 @@ use Poing\Ylem\Models\Medium;
 use Poing\Ylem\Models\Organization;
 use Poing\Ylem\Models\PartyRelationship;
 use Poing\Ylem\Models\TimePeriod;
+use Poing\Ylem\Http\YlemController;
+
 
 class Ylem
 {

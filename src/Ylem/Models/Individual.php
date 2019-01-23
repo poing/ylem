@@ -48,6 +48,11 @@ class Individual extends Model
     public function contactMedium() {
         return $this->morphMany(ContactMedium::class, 'contact');
     }
+    
+    public static function test()
+    {
+        return true;
+    }
 
 
 }

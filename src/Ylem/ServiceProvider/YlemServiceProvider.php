@@ -1,8 +1,11 @@
 <?php 
 
-namespace Ylem\ServiceProvider;
+namespace Poing\Ylem\ServiceProvider;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Foundation\AliasLoader;
+use Poing\Ylem\Facades\Facade as YlemFacade;
+use Poing\Ylem\Models\Individual as Individual;
 
 class YlemServiceProvider extends ServiceProvider {
 
@@ -25,6 +28,9 @@ class YlemServiceProvider extends ServiceProvider {
         $this->handleViews();
         // $this->handleTranslations();
         $this->handleRoutes();
+        $loader = AliasLoader::getInstance();
+        $loader->alias('Individual', Poing\Ylem\Models\Individual::class);
+
     }
 
     /**
@@ -34,7 +40,11 @@ class YlemServiceProvider extends ServiceProvider {
      */
     public function register() {
 
+        $this->handleMigrations();
         // Bind any implementations.
+        $loader = AliasLoader::getInstance();
+        $loader->alias('Individual', Poing\Ylem\Models\Individual::class);
+
 
     }
 
@@ -71,7 +81,7 @@ class YlemServiceProvider extends ServiceProvider {
 
     private function handleMigrations() {
 
-        $this->publishes([base_path('vendor/poing/ylem/migrations') => base_path('database/migrations')]);
+        $this->publishes([base_path('vendor/poing/ylem/src/Ylem/Database/migrations') => base_path('database/migrations')]);
     }
 
     private function handleRoutes() {
