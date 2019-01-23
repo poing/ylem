@@ -1,6 +1,6 @@
 <?php 
 
-namespace Poing\Ylem\ServiceProvider;
+namespace Poing\Ylem;
 
 use Illuminate\Support\ServiceProvider;
 //use Illuminate\Foundation\AliasLoader;
