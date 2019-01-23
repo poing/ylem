@@ -80,6 +80,8 @@ class YlemServiceProvider extends ServiceProvider {
     }
 
     private function handleMigrations() {
+    
+        $this->command->info('Creating migrations.');
 
         $this->publishes([__DIR__ . '/Database/migrations') => base_path('database/migrations']);
     }
