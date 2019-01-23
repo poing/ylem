@@ -81,7 +81,7 @@ class YlemServiceProvider extends ServiceProvider {
 
     private function handleMigrations() {
 
-        $this->publishes([base_path('vendor/poing/ylem/src/Ylem/Database/migrations') => base_path('database/migrations')]);
+        $this->publishes([__DIR__ . '/Database/migrations') => base_path('database/migrations']);
     }
 
     private function handleRoutes() {
