@@ -24,7 +24,7 @@ class YlemServiceProvider extends ServiceProvider {
     public function boot() {
 
         //$this->handleConfigs();
-        $this->loadMigrationsFrom(realpath(__DIR__.'/database/migrations'));
+        $this->loadMigrationsFrom(base_path('/database/migrations'));
         
         //$this->handleMigrations();
         //$this->handleViews();
