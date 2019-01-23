@@ -6,6 +6,10 @@
 This is an implementation of the TMF632 Party Management API REST Specification in Laravel.  Supporting Individual, Organization, & Organizational Unit relational hierarchies.  
 
 * [Quick Start](#quick-start)
+```
+composer require poing/ylem
+```
+
 
 Like the primordial substance from which all matter is formed, this is *intended* as the **core** application fabric for business and consumer interaction.
 
@@ -72,9 +76,6 @@ Below is an *example* of *recursive* iteration using the Blade templating engine
 
 ## Quick Start
 
-*This package has **not** be published to [packagist](https://packagist.org/) yet.*
-
-1. Clone this repo into a local directory named `poing`
 1. Create a Laravel Project
 
 ```bash
@@ -84,15 +85,6 @@ composer create-project --prefer-dist laravel/laravel project_name
 ```
 
 2. `cd project_name`
-3. Add the following `repositories` *section* to `composer.json`.  To install the package from a `local` source.
-```
-    "repositories": [
-        {
-            "type": "path",
-            "url": "/path/to/poing/**"
-        }
-    ],
-```
 3. `composer require poing/ylem`
 4. Publish the Laravel package
 ```
