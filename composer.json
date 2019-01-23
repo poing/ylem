@@ -22,7 +22,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Ylem\\": "src/"
+      "Poing\\Ylem\\": "src/"
     }
   },
   "minimum-stability": "dev",
@@ -30,8 +30,11 @@
         "laravel": {
             "providers": [
                 "Baum\\Providers\\BaumServiceProvider",
-                "Ylem\\Providers\\YlemServiceProvider"
-            ]
+                "Poing\\Ylem\\ServiceProvider\\YlemServiceProvider"
+            ],
+            "aliases": {
+                "Ylem": "Poing\\Ylem\\Facade"
+            }
         }
     }
 }

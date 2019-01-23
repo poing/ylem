@@ -1,6 +1,6 @@
 <?php 
 
-namespace Ylem\Providers;
+namespace Ylem\ServiceProvider;
 
 use Illuminate\Support\ServiceProvider;
 

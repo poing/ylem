@@ -2,8 +2,6 @@
 >
 > (in the Big Bang theory) the primordial matter of the universe, originally conceived as composed of neutrons at high temperature and density.
 
-changes made on GitLab
-
 # ylem
 This is an implementation of the TMF632 Party Management API REST Specification in Laravel.  Supporting Individual, Organization, & Organizational Unit relational hierarchies.  
 
