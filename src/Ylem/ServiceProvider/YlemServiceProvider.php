@@ -42,8 +42,8 @@ class YlemServiceProvider extends ServiceProvider {
 
         $this->handleMigrations();
         // Bind any implementations.
-        $loader = AliasLoader::getInstance();
-        $loader->alias('Individual', Poing\Ylem\Models\Individual::class);
+        //$loader = AliasLoader::getInstance();
+        //$loader->alias('Individual', Poing\Ylem\Models\Individual::class);
 
 
     }
