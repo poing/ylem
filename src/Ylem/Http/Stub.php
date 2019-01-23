@@ -1,6 +1,6 @@
 <?php
 
-namespace Ylem\Http;
+namespace Poing\Ylem\Http;
 
 use Ylem\Models\Group;
 use Ylem\Models\User;

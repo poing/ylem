@@ -1,6 +1,7 @@
 <?php
 
-namespace App;
+namespace Poing\Ylem\Models;
+
 
 use Illuminate\Database\Eloquent\Model;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Poing\Ylem\Models;
 
 //use App\Individual;
 //use App\PartyRelationship;
