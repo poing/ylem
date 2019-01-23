@@ -30,7 +30,7 @@
         "laravel": {
             "providers": [
                 "Baum\\Providers\\BaumServiceProvider",
-                "Poing\\Ylem\\ServiceProvider\\YlemServiceProvider"
+                "Poing\\Ylem\\YlemServiceProvider"
             ]
         }
     }
