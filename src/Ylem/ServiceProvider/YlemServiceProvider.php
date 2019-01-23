@@ -84,7 +84,7 @@ class YlemServiceProvider extends ServiceProvider {
         //$this->command->info('Creating migrations.');
 
         $this->publishes([
-            __DIR__ . '/Database/migrations') => base_path('database/migrations'
+            __DIR__ . '/Database/migrations' => base_path('database/migrations'
         ]);
     }
 
