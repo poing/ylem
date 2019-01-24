@@ -3,6 +3,7 @@
 namespace Poing\Ylem;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Database\Eloquent\Factory as EloquentFactory;
 //use Illuminate\Foundation\AliasLoader;
 //use Poing\Ylem\Facades\Facade as YlemFacade;
 //use Poing\Ylem\Models\Individual as Individual;
@@ -24,7 +25,7 @@ class YlemServiceProvider extends ServiceProvider {
     public function boot() {
 
         //$this->handleConfigs();
-        $this->loadMigrationsFrom(__DIR__.'/database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/Database/migrations');
         
         //$this->handleMigrations();
         //$this->handleViews();
@@ -32,6 +33,8 @@ class YlemServiceProvider extends ServiceProvider {
         //$this->handleRoutes();
         //$loader = AliasLoader::getInstance();
         //$loader->alias('Individual', Poing\Ylem\Models\Individual::class);
+
+
 
     }
 
@@ -41,6 +44,8 @@ class YlemServiceProvider extends ServiceProvider {
      * @return void
      */
     public function register() {
+    
+        $this->registerEloquentFactoriesFrom(__DIR__.'/Database/factories');
 
         //$this->handleMigrations();
         // Bind any implementations.
@@ -59,6 +64,18 @@ class YlemServiceProvider extends ServiceProvider {
 
         return [];
     }
+
+    /**
+     * Register factories.
+     *
+     * @param  string  $path
+     * @return void
+     */
+    protected function registerEloquentFactoriesFrom($path)
+    {
+        $this->app->make(EloquentFactory::class)->load($path);
+    }
+
 
     private function handleConfigs() {
 

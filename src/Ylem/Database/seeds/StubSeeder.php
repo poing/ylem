@@ -1,5 +1,7 @@
 <?php
 
+namespace Poing\Ylem\Database\Seeds;
+
 use Illuminate\Database\Seeder;
 use Poing\Ylem\Organization as Organization;
 use Poing\Ylem\Individual as Individual;
