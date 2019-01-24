@@ -2,7 +2,6 @@
 
 namespace Poing\Ylem\Models;
 
-
 use Illuminate\Database\Eloquent\Model;
 
 class Characteristic extends Model

@@ -1,12 +1,12 @@
 <?php
-
+// Old and should be removed!
 namespace Poing\Ylem\Http;
 
-use Ylem\Models\Group;
-use Ylem\Models\User;
-use Ylem\Models\Stub;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Ylem\Models\Group;
+use Ylem\Models\Stub;
+use Ylem\Models\User;
 
 class StubController extends Controller
 {

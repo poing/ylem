@@ -3,10 +3,10 @@
 namespace Poing\Ylem\Database\Seeds;
 
 use Illuminate\Database\Seeder;
-use Poing\Ylem\Models\Organization as Organization;
-use Poing\Ylem\Models\Individual as Individual;
 use Poing\Ylem\Models\Characteristic as Characteristic;
+use Poing\Ylem\Models\Individual as Individual;
 use Poing\Ylem\Models\Medium as Medium;
+use Poing\Ylem\Models\Organization as Organization;
 
 class StubSeeder extends Seeder
 {

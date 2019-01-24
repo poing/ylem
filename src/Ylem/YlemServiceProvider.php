@@ -35,6 +35,9 @@ class YlemServiceProvider extends ServiceProvider {
             ]);
         }
 
+        // Load Routes
+        $this->loadRoutesFrom(__DIR__.'/routes/party.php');
+
         //$this->handleConfigs();
         //$this->handleMigrations();
         //$this->handleViews();

@@ -2,10 +2,11 @@
 
 namespace Poing\Ylem\Models;
 
-//use App\Organization;
-//use App\PartyRelationship;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Poing\Ylem\Models\Characteristic as Characteristic;
+use Poing\Ylem\Models\ContactMedium as ContactMedium;
+use Poing\Ylem\Models\PartyRelationship as PartyRelationship;
 
 class Individual extends Model
 {
@@ -48,7 +49,7 @@ class Individual extends Model
     public function contactMedium() {
         return $this->morphMany(ContactMedium::class, 'contact');
     }
-    
+
     public static function test()
     {
         return true;

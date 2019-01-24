@@ -3,7 +3,6 @@
 use Faker\Generator as Faker;
 use Poing\Ylem\Models\Organization as Organization;
 
-
 $factory->define(Organization::class, function (Faker $faker) {
     return [
         'status' => $faker->word,

@@ -3,6 +3,7 @@
 namespace Poing\Ylem\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Poing\Ylem\Models\Medium as Medium;
 
 class ContactMedium extends Model
 {
@@ -13,7 +14,7 @@ class ContactMedium extends Model
     }
 
     public function medium() {
-        return $this->hasOne('Poing\Ylem\Models\Medium', 'medium_id');
+        return $this->hasOne(Medium::class, 'medium_id');
     }
 
 }

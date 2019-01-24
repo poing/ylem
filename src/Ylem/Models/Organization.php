@@ -2,11 +2,13 @@
 
 namespace Poing\Ylem\Models;
 
-//use App\Individual;
-//use App\PartyRelationship;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Collection;
+use Poing\Ylem\Models\Characteristic as Characteristic;
+use Poing\Ylem\Models\ContactMedium as ContactMedium;
+use Poing\Ylem\Models\PartyRelationship as PartyRelationship;
+use Poing\Ylem\Models\TimePeriod as TimePeriod;
 
 class Organization extends Model
 {

@@ -3,7 +3,6 @@
 use Faker\Generator as Faker;
 use Poing\Ylem\Models\Individual as Individual;
 
-
 $factory->define(Individual::class, function (Faker $faker) {
 
     $base = [null,'male','female'];

@@ -5,7 +5,6 @@ namespace Poing\Ylem\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Database\Eloquent\Model;
 
-
 class YlemSeeder extends Command
 {
     /**
@@ -48,7 +47,7 @@ class YlemSeeder extends Command
             $this->comment('Migrations have not been run');
 
             // Prompt User to Run Migrations
-            if ($this->confirm('Do you wish to run ylem migrations?')) {
+            if ($this->confirm('Do you run to run ALL migrations?')) {
                 $this->call('migrate');
             } else {
                 $this->error ('Migrations have not been run');

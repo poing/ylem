@@ -1,17 +1,15 @@
 <?php
-
+// This is just for testing Facades
 namespace Poing\Ylem\Http;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class YlemController extends Controller
 {
     public static function test()
     {
-        //$data = Stub::roots()->get();
-        //return view('ylem.tree', compact('data'));
-        //return view('tree', \App\Stub::roots()->get());
+
         return true;
     }
 }

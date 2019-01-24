@@ -2,8 +2,6 @@
 
 namespace Poing\Ylem\Models;
 
-//use App\Individual;
-//use App\Organization;
 use Baum\Node;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;

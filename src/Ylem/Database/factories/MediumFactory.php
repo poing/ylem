@@ -3,7 +3,6 @@
 use Faker\Generator as Faker;
 use Poing\Ylem\Models\Medium as Medium;
 
-
 $factory->define(Medium::class, function (Faker $faker) {
     return [
         //
