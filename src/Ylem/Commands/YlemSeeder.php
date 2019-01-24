@@ -57,7 +57,7 @@ class YlemSeeder extends Command
         if (\Schema::hasTable('party_relationships')) {
             if ($this->confirm('Do you install the ylem demo data?')) {
                 $this->call('db:seed', [
-                    '--class' => 'Poing\Ylem\Database\Seeds\StubSeeder',
+                    '--class' => 'Poing\Ylem\database\Seeds\StubSeeder',
                 ]);
             }
         }

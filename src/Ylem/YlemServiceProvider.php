@@ -26,7 +26,7 @@ class YlemServiceProvider extends ServiceProvider {
 
 
         // Load Migrations
-        $this->loadMigrationsFrom(__DIR__.'/Database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/database/migrations');
 
         // Load Commands
         if ($this->app->runningInConsole()) {
@@ -56,7 +56,7 @@ class YlemServiceProvider extends ServiceProvider {
     public function register() {
 
         // Register Factories
-        $this->registerEloquentFactoriesFrom(__DIR__.'/Database/factories');
+        $this->registerEloquentFactoriesFrom(__DIR__.'/satabase/factories');
 
           //$this->handleMigrations();
         // Bind any implementations.
