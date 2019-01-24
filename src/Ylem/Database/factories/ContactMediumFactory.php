@@ -2,7 +2,10 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(App\ContactMedium::class, function (Faker $faker) {
+use Poing\Ylem\Models\ContactMedium as ContactMedium;
+
+
+$factory->define(ContactMedium::class, function (Faker $faker) {
     return [
         //
     ];

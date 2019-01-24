@@ -23,11 +23,11 @@ class StubSeeder extends Seeder
     private function company($number)
     {
 
-        $this->command->info('Creating random tree data.');
+        $this->command->info('Seeding database with random ylem data.');
         $this->command->info('This may take a while...');
 
         for( $i = 1; $i<=$number; $i++ ) {
-            $this->command->info('Generating set ' . $i . ' of ' . $number);
+            $this->command->info('Generating set ' . $i . ' of ' . $number );
             /*
             $org = Organization::create([
                 'tradingName' => $faker->company,

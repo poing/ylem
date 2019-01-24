@@ -10,7 +10,7 @@ class Medium extends Model
 
     public function contactMedium()
     {
-        return $this->belongsTo('App\ContactMedium');
+        return $this->belongsTo('Poing\Ylem\Models\ContactMedium');
     }
 
 }

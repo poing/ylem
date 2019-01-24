@@ -13,7 +13,7 @@ class ContactMedium extends Model
     }
 
     public function medium() {
-        return $this->hasOne('App\Medium', 'medium_id');
+        return $this->hasOne('Poing\Ylem\Models\Medium', 'medium_id');
     }
 
 }

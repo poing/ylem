@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Poing\Ylem;
 
@@ -24,24 +24,24 @@ class YlemServiceProvider extends ServiceProvider {
      */
     public function boot() {
 
-        //$this->handleConfigs();
+
+        // Load Migrations
         $this->loadMigrationsFrom(__DIR__.'/Database/migrations');
-        
+
+        // Load Commands
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                \Poing\Ylem\Commands\YlemSeeder::class,
+            ]);
+        }
+
+        //$this->handleConfigs();
         //$this->handleMigrations();
         //$this->handleViews();
         // $this->handleTranslations();
         //$this->handleRoutes();
         //$loader = AliasLoader::getInstance();
         //$loader->alias('Individual', Poing\Ylem\Models\Individual::class);
-
-        if ($this->app->runningInConsole()) {
-            $this->commands([
-                Poing\Ylem\Commands\YlemSeeder::class,
-        ]);
-
-    $this->registerEloquentFactoriesFrom(__DIR__.'/Database/factories');
-
-
 
     }
 
@@ -51,10 +51,11 @@ class YlemServiceProvider extends ServiceProvider {
      * @return void
      */
     public function register() {
-    
-        
 
-        //$this->handleMigrations();
+        // Register Factories
+        $this->registerEloquentFactoriesFrom(__DIR__.'/Database/factories');
+
+          //$this->handleMigrations();
         // Bind any implementations.
         //$loader = AliasLoader::getInstance();
         //$loader->alias('Individual', Poing\Ylem\Models\Individual::class);
@@ -106,9 +107,9 @@ class YlemServiceProvider extends ServiceProvider {
     }
 
     private function handleMigrations() {
-    
+
         //$this->command->info('Creating migrations.');
-        
+
         /*
         $this->publishes([
             __DIR__ . '/database/migrations' => base_path('database/migrations')

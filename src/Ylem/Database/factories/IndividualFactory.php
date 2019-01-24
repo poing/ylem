@@ -1,8 +1,10 @@
 <?php
 
 use Faker\Generator as Faker;
+use Poing\Ylem\Models\Individual as Individual;
 
-$factory->define(App\Individual::class, function (Faker $faker) {
+
+$factory->define(Individual::class, function (Faker $faker) {
 
     $base = [null,'male','female'];
     $gender = array_rand($base);
