@@ -3,8 +3,10 @@
 namespace Poing\Ylem\Database\Seeds;
 
 use Illuminate\Database\Seeder;
-use Poing\Ylem\Organization as Organization;
-use Poing\Ylem\Individual as Individual;
+use Poing\Ylem\Models\Organization as Organization;
+use Poing\Ylem\Models\Individual as Individual;
+use Poing\Ylem\Models\Characteristic as Characteristic;
+use Poing\Ylem\Models\Medium as Medium;
 
 class StubSeeder extends Seeder
 {
@@ -34,7 +36,8 @@ class StubSeeder extends Seeder
                 'isLegalEntity' => true,
             ]);
             */
-            $org = factory(Ylem\Organization::class)->states('org')->create();
+            $org = factory(Organization::class)
+                ->states('org')->create();
             $org->existsDuring()->create(['startDate' => $org->created_at,]);
             $this->trait($org);
             $parent = $org->party()->create();
@@ -49,7 +52,8 @@ class StubSeeder extends Seeder
             */
 
 
-            $unit = factory(Ylem\Organization::class)->states('unit')->create();
+            $unit = factory(Organization::class)
+                ->states('unit')->create();
             $this->trait($unit);
             $child = $unit->party()->create();
         //$unit->contactMedium()->create();
@@ -64,7 +68,8 @@ class StubSeeder extends Seeder
 
         // Create a few users as root
         for( $i = 1; $i<=rand(1,$number); $i++ ) {
-            $person = factory(Ylem\Individual::class)->create();
+            $person = factory(Individual::class)
+                ->create();
             $person->party()->create();
         }
 
@@ -75,7 +80,8 @@ class StubSeeder extends Seeder
         $number = rand(0,3);
         for( $i = 0; $i<=$number; $i++ ) {
 
-            $trait = factory(Ylem\Characteristic::class)->make();
+            $trait = factory(Characteristic::class)
+                ->make();
             $parent->trait()->updateOrCreate(
                 ['name' => $trait->name,],
                 $trait->toArray()
@@ -99,7 +105,8 @@ class StubSeeder extends Seeder
         $default = true;
         for( $i = 0; $i<=$number; $i++ ) {
 
-            $factory = factory(Ylem\Medium::class)->states($type)->make();
+            $factory = factory(Medium::class)
+                ->states($type)->make();
 
             $data = $parent->contactMedium()->create([
                 'preferred' => $default,
@@ -115,7 +122,7 @@ class StubSeeder extends Seeder
     private function unit($parent)
     {
 
-        $unit = factory(Ylem\Organization::class)->states('unit')->create();
+        $unit = factory(Organization::class)->states('unit')->create();
         $this->trait($unit);
         $child = $unit->party()->create();
     //$unit->contactMedium()->create();
@@ -139,7 +146,7 @@ class StubSeeder extends Seeder
     private function individual($parent, $skip = true)
     {
         // Add at least one individual to parent
-        $person = factory(Ylem\Individual::class)->create();
+        $person = factory(Individual::class)->create();
         $this->trait($person);
 
         //$person = Individual::create(['name' => $faker->name]);
