@@ -37,8 +37,9 @@ class YlemServiceProvider extends ServiceProvider {
         if ($this->app->runningInConsole()) {
             $this->commands([
                 Poing\Ylem\Commands\YlemSeeder::class,
-            ]);
+        ]);
 
+    $this->registerEloquentFactoriesFrom(__DIR__.'/Database/factories');
 
 
 
@@ -51,7 +52,7 @@ class YlemServiceProvider extends ServiceProvider {
      */
     public function register() {
     
-        $this->registerEloquentFactoriesFrom(__DIR__.'/Database/factories');
+        
 
         //$this->handleMigrations();
         // Bind any implementations.
