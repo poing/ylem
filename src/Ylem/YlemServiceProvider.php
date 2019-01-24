@@ -34,6 +34,12 @@ class YlemServiceProvider extends ServiceProvider {
         //$loader = AliasLoader::getInstance();
         //$loader->alias('Individual', Poing\Ylem\Models\Individual::class);
 
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                Poing\Ylem\Commands\YlemSeeder::class,
+            ]);
+
+
 
 
     }
