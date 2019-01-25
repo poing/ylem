@@ -8,6 +8,7 @@ This is an implementation of the TMF632 Party Management API REST Specification 
 * [Quick Start](#quick-start)
 ```
 composer require poing/ylem
+php artisan ylem:seed
 ```
 
 
