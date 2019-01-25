@@ -56,7 +56,7 @@ class YlemServiceProvider extends ServiceProvider {
     public function register() {
 
         // Register Factories
-        $this->registerEloquentFactoriesFrom(__DIR__.'/satabase/factories');
+        $this->registerEloquentFactoriesFrom(__DIR__.'/database/factories');
 
           //$this->handleMigrations();
         // Bind any implementations.
