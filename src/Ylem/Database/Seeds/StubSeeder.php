@@ -1,6 +1,6 @@
 <?php
 
-namespace Poing\Ylem\Seeds;
+namespace Poing\Ylem\Database\Seeds;
 
 use Illuminate\Database\Seeder;
 use Poing\Ylem\Models\Characteristic as Characteristic;
