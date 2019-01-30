@@ -35,8 +35,11 @@ class YlemServiceProvider extends ServiceProvider {
             ]);
         }
 
-        // Load Routes
-        $this->loadRoutesFrom(__DIR__.'/routes/party.php');
+        // Load Web Routes
+        $this->loadRoutesFrom(__DIR__.'/routes/web.php');
+
+        // Add API Routes
+        $this->app->register('Poing\Ylem\Providers\YlemRouteServiceProvider');
 
         //$this->handleConfigs();
         //$this->handleMigrations();
