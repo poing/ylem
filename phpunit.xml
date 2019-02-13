@@ -10,7 +10,7 @@
          stopOnFailure="false">
 
     <testsuite name="app1" >
-        <directory>./Tests</directory>
+        <directory>./test</directory>
     </testsuite>
 
     <filter>

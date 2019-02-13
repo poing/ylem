@@ -27,7 +27,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Tests\\": "Tests/"
+      "Ylem\\Test\\": "test/"
     }
   },
   "minimum-stability": "stable",
