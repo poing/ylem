@@ -11,17 +11,17 @@
 
     <testsuites>
         <testsuite name="baseline">
-            <directory suffix=".php">Tests</directory>
+            <file>./Tests/AlphaTest.php</file>
         </testsuite>
     </testsuites>
 
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">src/Ylem</directory>
+            <directory suffix=".php">./src/Ylem</directory>
 
             <exclude>
-                <directory suffix="Factory.php">src/Ylem</directory>
-                <directory suffix=".php">src/Ylem/routes</directory>
+                <directory suffix="Factory.php">./src/Ylem</directory>
+                <directory suffix=".php">./src/Ylem/routes</directory>
 
             </exclude>
         </whitelist>
