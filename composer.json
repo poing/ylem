@@ -11,13 +11,13 @@
     }
   ],
   "require": {
-    "php": ">=7.0",
-    "laravel/framework": "5.7.*",
+    "php": "^7.0",
     "illuminate/config": "~5.0",
     "illuminate/support": "~5.0",
     "gazsp/baum": "~1.1"
   },
   "require-dev": {
+    "laravel/framework": "^5.7",
     "phpunit/phpunit": "^8"
   },
   "autoload": {
