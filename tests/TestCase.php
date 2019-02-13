@@ -9,6 +9,10 @@ use PHPUnit\Framework\TestCase;
 *
 *  @author yourname
 */
+
+/**
+* @covers \Poing\Ylem\Models\ContactMedium::medium()
+*/
 class MyTestCase extends TestCase
 {
 
@@ -35,4 +39,21 @@ class MyTestCase extends TestCase
   {
 	$this->assertTrue(true);
   }
+
+  /**
+   * @covers Poing\Ylem\Models\Characteristic
+   */
+  public function testCharacteristic()
+  {
+	$this->assertTrue(true);
+  }
+
+  /**
+   * @coversDefaultClass Poing\Ylem\Models\Individual
+   */
+  public function testIndividual()
+  {
+	$this->assertTrue(true);
+  }
+
 }
