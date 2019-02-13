@@ -1,5 +1,5 @@
 <?php
-namespace Poing\Ylem\Tests;
+namespace Tests;
 
 use PHPUnit\Framework\TestCase;
 use Poing\Ylem\Alpha\Overlord;
