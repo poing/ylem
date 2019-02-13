@@ -17,8 +17,7 @@
 
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">src/Ylem/Models</directory>
-            <file>src/Ylem/Alpha/Overlord.php</file>
+            <directory suffix=".php">src/Ylem</directory>
         </whitelist>
     </filter>
 
