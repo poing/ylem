@@ -27,7 +27,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Poing\\Ylem\\Tests\\": "tests/"
+      "Poing\\Ylem\\Tests\\": "Tests/"
     }
   },
   "minimum-stability": "stable",
