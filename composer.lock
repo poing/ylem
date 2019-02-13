@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "41e39b5cd3731bd8b28e930f6fadccec",
+    "content-hash": "fb974e2cedc01e98dddf8a4877a53433",
     "packages": [
         {
             "name": "doctrine/cache",
@@ -4039,12 +4039,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "1155caa45b23f89f140a14af08e934a71a60f7e8"
+                "reference": "83008de5cdad1e014b4b3903309c611bc181d872"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/1155caa45b23f89f140a14af08e934a71a60f7e8",
-                "reference": "1155caa45b23f89f140a14af08e934a71a60f7e8",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/83008de5cdad1e014b4b3903309c611bc181d872",
+                "reference": "83008de5cdad1e014b4b3903309c611bc181d872",
                 "shasum": ""
             },
             "require": {
@@ -4104,7 +4104,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2019-02-07T18:43:24+00:00"
+            "time": "2019-02-08T17:20:37+00:00"
         },
         {
             "name": "symfony/var-dumper",
@@ -4382,7 +4382,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.1.1"
+        "php": ">=7.0"
     },
     "platform-dev": []
 }
