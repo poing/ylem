@@ -1,11 +1,17 @@
 <phpunit bootstrap="vendor/autoload.php">
-    <testsuite name="app1" >
-        <directory>tests/TestCase.php</directory>
-    </testsuite>
-	<filter>
-		<whitelist processUncoveredFilesFromWhitelist="true">
-			<directory suffix=".php">src/Ylem/Alpha</directory>
 
-		</whitelist>
-	</filter>
+    <testsuites>
+        <testsuite name="baseline">
+            <directory suffix=".php">Tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src/Ylem/Alpha</directory>
+            <directory suffix=".php">src/Ylem/Models</directory>
+        </whitelist>
+    </filter>
+
 </phpunit>
+
