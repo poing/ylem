@@ -7,7 +7,7 @@ use Poing\Ylem\Alpha\Overlord;
 /**
  * @coversDefaultClass Poing\Ylem\Alpha\Overlord
  */
-class MyTestCase extends TestCase
+class AlphaTest extends TestCase
 {
 
   /**
