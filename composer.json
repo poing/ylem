@@ -12,13 +12,13 @@
   ],
   "require": {
     "php": ">=7.0",
+    "laravel/framework": "5.7.*",
     "illuminate/config": "~5.0",
     "illuminate/support": "~5.0",
     "gazsp/baum": "~1.1"
   },
   "require-dev": {
-    "laravel/framework": "^5.9@dev",
-    "phpunit/phpunit": "^8.1@dev"
+    "phpunit/phpunit": "^8"
   },
   "autoload": {
     "psr-4": {
@@ -30,7 +30,7 @@
       "Poing\\Ylem\\Tests\\": "tests/"
     }
   },
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
     "extra": {
         "laravel": {
             "providers": [
