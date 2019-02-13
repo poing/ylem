@@ -5,7 +5,7 @@ namespace Poing\Ylem\Alpha;
 class Overlord
 {
 
-    public function baseline()
+    public static function baseline()
     {
         return true;
     }
