@@ -9,11 +9,9 @@
          processIsolation="false"
          stopOnFailure="false">
 
-    <testsuites>
-        <testsuite name="baseline">
-            <file>./Tests/AlphaTest.php</file>
-        </testsuite>
-    </testsuites>
+    <testsuite name="app1" >
+        <directory>./Tests</directory>
+    </testsuite>
 
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
