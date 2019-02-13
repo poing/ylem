@@ -4,7 +4,7 @@
     </testsuite>
 	<filter>
 		<whitelist processUncoveredFilesFromWhitelist="true">
-			<directory suffix=".php">src/Ylem/Tests</directory>
+			<directory suffix=".php">src/Ylem/Alpha</directory>
 
 		</whitelist>
 	</filter>

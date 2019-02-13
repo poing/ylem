@@ -1,6 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
-//use \Poing\Ylem\Test\Stub;
+use Poing\Ylem\Alpha\Overlord;
 
 /**
 *  Corresponding Class to test YourClass class
@@ -12,18 +12,18 @@ use PHPUnit\Framework\TestCase;
 */
 
   /**
-   * @coversDefaultClass Poing\Ylem\Test\Stub
+   * @coversDefaultClass Poing\Ylem\Alpha\Overlord
    */
 class MyTestCase extends TestCase
 {
 
   /**
-   * @covers Poing\Ylem\Test\Stub::baseline()
+   * @covers Poing\Ylem\Alpha\Overlord::baseline()
    */
-  public function testStub()
+  public function testOverlord()
   {
-   // $test = \Poing\Ylem\Test\Stub::baseline();
-	$this->assertTrue(Poing\Ylem\Tests\Stub::baseline());
+   // $test = \Poing\Ylem\Alpha\Overlord::baseline();
+	$this->assertTrue(Overlord::baseline());
   }
 
 }

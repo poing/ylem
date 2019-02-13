@@ -1,7 +1,8 @@
 <?php
-namespace Poing\Ylem\Tests;
 
-class Stub
+namespace Poing\Ylem\Alpha;
+
+class Overlord
 {
 
     public function baseline()
