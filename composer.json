@@ -17,8 +17,7 @@
     "gazsp/baum": "~1.1"
   },
   "require-dev": {
-    "phpunit/phpunit": "^7",
-    "zendframework/zend-diactoros": "^2.1",
+    "phpunit/phpunit": "^8",
     "laravel/framework": "^5.7"
   },
   "autoload": {
