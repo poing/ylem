@@ -17,7 +17,7 @@
 
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./src/Ylem</directory>
+            <directory suffix=".php">./src/Ylem/Alpha</directory>
 
             <exclude>
                 <directory suffix="Factory.php">./src/Ylem</directory>
