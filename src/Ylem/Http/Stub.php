@@ -2,11 +2,12 @@
 // Old and should be removed!
 namespace Poing\Ylem\Http;
 
-use App\Http\Controllers\Controller;
+//use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Ylem\Models\Group;
-use Ylem\Models\Stub;
-use Ylem\Models\User;
+use Illuminate\Routing\Controller;
+//use Ylem\Models\Group;
+//use Ylem\Models\Stub;
+//use Ylem\Models\User;
 
 class StubController extends Controller
 {

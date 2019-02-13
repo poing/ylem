@@ -3,9 +3,9 @@
 namespace Poing\Ylem\Providers;
 
 use Illuminate\Support\Facades\Route;
-use App\Providers\RouteServiceProvider;
+use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
-class YlemRouteServiceProvider extends RouteServiceProvider
+class YlemRouteServiceProvider extends ServiceProvider
 {
     /**
      * This namespace is applied to your controller routes.

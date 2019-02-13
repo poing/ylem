@@ -2,10 +2,12 @@
 // This is just for testing Facades
 namespace Poing\Ylem\Http;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
-class YlemController extends Controller
+class YlemController extends BaseController
 {
     public static function test()
     {

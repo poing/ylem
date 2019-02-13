@@ -1,7 +1,7 @@
-<?php 
+<?php
 
 namespace Poing\Ylem;
-  
+
 class Facade extends \Illuminate\Support\Facades\Facade
 {
     /**
@@ -9,6 +9,6 @@ class Facade extends \Illuminate\Support\Facades\Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'Poing\Ylem\Models\';
+        return 'testing';
     }
 }
