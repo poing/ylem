@@ -1,5 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
+//use \Poing\Ylem\Test\Stub;
 
 /**
 *  Corresponding Class to test YourClass class
@@ -10,50 +11,19 @@ use PHPUnit\Framework\TestCase;
 *  @author yourname
 */
 
-/**
-* @covers \Poing\Ylem\Models\ContactMedium::medium()
-*/
+  /**
+   * @coversDefaultClass Poing\Ylem\Test\Stub
+   */
 class MyTestCase extends TestCase
 {
 
   /**
-  * Just check if the YourClass has no syntax error
-  *
-  * This is just a simple check to make sure your library has no syntax error. This helps you troubleshoot
-  * any typo before you even use this library in a real project.
-  *
-  */
-  public function testIsThereAnySyntaxError()
-  {
-	$this->assertTrue(true);
-  }
-
-  /**
-  * Just check if the YourClass has no syntax error
-  *
-  * This is just a simple check to make sure your library has no syntax error. This helps you troubleshoot
-  * any typo before you even use this library in a real project.
-  *
-  */
-  public function testMethod1()
-  {
-	$this->assertTrue(true);
-  }
-
-  /**
-   * @covers Poing\Ylem\Models\Characteristic
+   * @covers Poing\Ylem\Test\Stub::baseline()
    */
-  public function testCharacteristic()
+  public function testStub()
   {
-	$this->assertTrue(true);
-  }
-
-  /**
-   * @coversDefaultClass Poing\Ylem\Models\Individual
-   */
-  public function testIndividual()
-  {
-	$this->assertTrue(true);
+   // $test = \Poing\Ylem\Test\Stub::baseline();
+	$this->assertTrue(Poing\Ylem\Tests\Stub::baseline());
   }
 
 }
