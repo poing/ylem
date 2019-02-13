@@ -18,6 +18,7 @@ before_script:
 #- docker-php-ext-enable mcrypt
 # Install and run Composer
 - curl -sS https://getcomposer.org/installer | php
+- php composer.phar clear-cache
 - php composer.phar install
 
 # Bring in any services we need http://docs.gitlab.com/ee/ci/docker/using_docker_images.html#what-is-a-service
