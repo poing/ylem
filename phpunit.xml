@@ -4,10 +4,8 @@
     </testsuite>
 	<filter>
 		<whitelist processUncoveredFilesFromWhitelist="true">
-			<directory suffix=".php">src</directory>
-			<exclude>
-			    <directory suffix=".php">src/Ylem/Database/factories</directory>
-			</exclude>
+			<directory suffix=".php">src/Ylem/Models</directory>
+
 		</whitelist>
 	</filter>
 </phpunit>
