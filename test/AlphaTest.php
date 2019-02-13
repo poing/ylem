@@ -1,8 +1,9 @@
 <?php
 namespace Ylem\Test;
 
-use PHPUnit\Framework\TestCase;
+//use PHPUnit\Framework\TestCase;
 use Poing\Ylem\Alpha\Overlord;
+use Orchestra\Testbench\TestCase;
 
 /**
  * @coversDefaultClass Poing\Ylem\Alpha\Overlord
