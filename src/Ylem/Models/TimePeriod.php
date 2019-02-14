@@ -36,4 +36,11 @@ class TimePeriod extends Model
         return $this->morphTo();
     }
 
+    /**
+     * Used to test phpunit access to this class
+     */
+    public static function test()
+    {
+        return true;
+    }
 }

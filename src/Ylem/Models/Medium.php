@@ -14,4 +14,11 @@ class Medium extends Model
         return $this->belongsTo(ContactMedium::class);
     }
 
+    /**
+     * Used to test phpunit access to this class
+     */
+    public static function test()
+    {
+        return true;
+    }
 }

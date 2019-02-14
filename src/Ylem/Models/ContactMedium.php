@@ -17,4 +17,11 @@ class ContactMedium extends Model
         return $this->hasOne(Medium::class, 'medium_id');
     }
 
+    /**
+     * Used to test phpunit access to this class
+     */
+    public static function test()
+    {
+        return true;
+    }
 }

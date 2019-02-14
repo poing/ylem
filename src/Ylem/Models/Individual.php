@@ -50,10 +50,11 @@ class Individual extends Model
         return $this->morphMany(ContactMedium::class, 'contact');
     }
 
+    /**
+     * Used to test phpunit access to this class
+     */
     public static function test()
     {
         return true;
     }
-
-
 }
