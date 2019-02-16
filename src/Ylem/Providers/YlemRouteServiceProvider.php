@@ -14,7 +14,7 @@ class YlemRouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'Poing\Ylem\Controllers';
+    protected $namespace = 'Poing\Ylem\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -37,7 +37,7 @@ class YlemRouteServiceProvider extends ServiceProvider
     {
         $this->mapApiRoutes();
 
-        //$this->mapWebRoutes();
+        $this->mapWebRoutes();
 
         //
     }
@@ -53,7 +53,7 @@ class YlemRouteServiceProvider extends ServiceProvider
     {
         Route::middleware('web')
              ->namespace($this->namespace)
-             ->group(base_path('routes/web.php'));
+             ->group(realpath(__DIR__.'/../routes/web.php'));
     }
 
     /**
