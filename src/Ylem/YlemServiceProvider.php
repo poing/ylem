@@ -35,15 +35,16 @@ class YlemServiceProvider extends ServiceProvider {
             ]);
         }
 
-        // Load Web Routes
-        $this->loadRoutesFrom(__DIR__.'/routes/web.php');
+		// Add all routes
+		$this->app->register('Poing\Ylem\Providers\YlemRouteServiceProvider');
 
-        // Add API Routes
-        $this->app->register('Poing\Ylem\Providers\YlemRouteServiceProvider');
+        // Load Web Routes (Figured we don't need this and it creates namespace issues)
+        /* $this->loadRoutesFrom(__DIR__.'/routes/web.php'); */
+
 
         //$this->handleConfigs();
         //$this->handleMigrations();
-        //$this->handleViews();
+        $this->handleViews();
         // $this->handleTranslations();
         //$this->handleRoutes();
         //$loader = AliasLoader::getInstance();
@@ -107,9 +108,9 @@ class YlemServiceProvider extends ServiceProvider {
 
     private function handleViews() {
 
-        $this->loadViewsFrom(__DIR__.'/../views', 'packagename');
+        $this->loadViewsFrom(__DIR__.'/Views', 'ylem');
 
-        $this->publishes([base_path('vendor/poing/ylem/views') => base_path('resources/views/ylem')]);
+        /* $this->publishes([base_path('vendor/poing/ylem/views') => base_path('resources/views/ylem')]); */
     }
 
     private function handleMigrations() {
