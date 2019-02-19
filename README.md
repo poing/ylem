@@ -1,7 +1,5 @@
-![](https://gitlab.com/poing/ylem/badges/master/coverage.svg)
-![](https://gitlab.com/poing/ylem/badges/master/build.svg)
-
-[![Coverage](https://gitlab.com/<namespace>/<project>/badges/<branch>/coverage.svg)](https://gitlab.com/<namespace>/<project>/)
+![](https://gitlab.com/poing/ylem/badges/rebuild/coverage.svg)
+![](https://gitlab.com/poing/ylem/badges/rebuild/build.svg)
 
 > **ylem** /ˈiːlɛm/ *noun*
 >
