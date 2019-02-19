@@ -15,11 +15,11 @@
 
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./src/Ylem</directory>
+            <directory suffix=".php">./src/Models</directory>
 
             <exclude>
-                <directory suffix="Factory.php">./src/Ylem</directory>
-                <directory suffix=".php">./src/Ylem/routes</directory>
+                <directory suffix="Factory.php">./src</directory>
+                <directory suffix=".php">./src/routes</directory>
 
             </exclude>
         </whitelist>

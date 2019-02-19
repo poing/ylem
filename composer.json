@@ -29,10 +29,7 @@
   "autoload-dev": {
     "psr-4": {
       "Ylem\\Test\\": "test/"
-    },
-	"classmap": [
-		"src/Ylem"
-	]
+    }
   },
   "minimum-stability": "stable",
     "extra": {
