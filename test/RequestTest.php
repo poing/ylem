@@ -23,4 +23,11 @@ class RequestTest extends TestCase
         $this->assertEquals($oldValue, old('name'));
     }
  */
+
+  public function testBasic()
+  {
+   // $test = \Poing\Ylem\Alpha\Overlord::baseline();
+	$this->assertTrue(true);
+  }
+
 }
