@@ -1,14 +1,13 @@
 <?php
 namespace Ylem\Test\Models;
 
-//use PHPUnit\Framework\TestCase;
 use Poing\Ylem\Models\Characteristic;
-use Orchestra\Testbench\TestCase;
+use Ylem\Test\Models\AbstractTest;
 
 /**
  * @coversDefaultClass Poing\Ylem\Models\Characteristic
  */
-class CharacteristicTest extends TestCase
+class CharacteristicTest extends AbstractTest
 {
 
   /**

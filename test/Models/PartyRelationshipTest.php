@@ -1,14 +1,13 @@
 <?php
 namespace Ylem\Test\Models;
 
-//use PHPUnit\Framework\TestCase;
 use Poing\Ylem\Models\PartyRelationship;
-use Orchestra\Testbench\TestCase;
+use Ylem\Test\Models\AbstractTest;
 
 /**
  * @coversDefaultClass Poing\Ylem\Models\Characteristic
  */
-class PartyRelationshipTest extends TestCase
+class PartyRelationshipTest extends AbstractTest
 {
 
   /**

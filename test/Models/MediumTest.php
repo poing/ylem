@@ -1,14 +1,13 @@
 <?php
 namespace Ylem\Test\Models;
 
-//use PHPUnit\Framework\TestCase;
 use Poing\Ylem\Models\Medium;
-use Orchestra\Testbench\TestCase;
+use Ylem\Test\Models\AbstractTest;
 
 /**
  * @coversDefaultClass Poing\Ylem\Models\Medium
  */
-class MediumTest extends TestCase
+class MediumTest extends AbstractTest
 {
 
   /**

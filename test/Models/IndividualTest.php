@@ -1,14 +1,13 @@
 <?php
 namespace Ylem\Test\Models;
 
-//use PHPUnit\Framework\TestCase;
 use Poing\Ylem\Models\Individual;
-use Orchestra\Testbench\TestCase;
+use Ylem\Test\Models\AbstractTest;
 
 /**
  * @coversDefaultClass Poing\Ylem\Models\Individual
  */
-class IndividualTest extends TestCase
+class IndividualTest extends AbstractTest
 {
 
   /**
