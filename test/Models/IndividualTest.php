@@ -106,7 +106,7 @@ class IndividualTest extends AbstractTest
   /**
    * @covers Poing\Ylem\Models\Individual::probe()
    */
-  public function testClass()
+  public function testIndividualClass()
   {
 	$this->assertTrue(Individual::probe());
   }
