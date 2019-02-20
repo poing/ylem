@@ -3,7 +3,7 @@
 namespace Poing\Ylem\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Poing\Ylem\Models\Medium as Medium;
+use Poing\Ylem\Models\Medium;
 
 class ContactMedium extends Model
 {
@@ -14,7 +14,7 @@ class ContactMedium extends Model
 
     protected $table = 'contact_medium';
 
-    public function party() {
+    public function contact() {
         return $this->morphTo();
     }
 
@@ -25,7 +25,7 @@ class ContactMedium extends Model
     /**
      * Used to test phpunit access to this class
      */
-    public static function test()
+    public static function probe()
     {
         return true;
     }
