@@ -81,7 +81,7 @@ class Organization extends Model
     /**
      * Used to test phpunit access to this class
      */
-    public static function test()
+    public static function probe()
     {
         return true;
     }

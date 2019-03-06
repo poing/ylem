@@ -9,7 +9,11 @@ class ContactMedium extends Model
 {
     protected $table = 'contact_medium';
 
-    public function party() {
+    protected $fillable = [
+        'preferred', 'type',
+    ];
+
+    public function contact() {
         return $this->morphTo();
     }
 
@@ -20,7 +24,7 @@ class ContactMedium extends Model
     /**
      * Used to test phpunit access to this class
      */
-    public static function test()
+    public static function probe()
     {
         return true;
     }

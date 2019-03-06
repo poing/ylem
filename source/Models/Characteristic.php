@@ -19,14 +19,14 @@ class Characteristic extends Model
         'id', 'trait_id', 'trait_type', 'created_at', 'updated_at',
     ];
 
-    public function party() {
+    public function trait() {
         return $this->morphTo();
     }
 
     /**
      * Used to test phpunit access to this class
      */
-    public static function test()
+    public static function probe()
     {
         return true;
     }
