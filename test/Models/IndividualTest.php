@@ -16,6 +16,10 @@ class IndividualTest extends AbstractTest
      */
     public function testGetNameAttribute()
     {
+
+        $status = Individual::all();
+        $this->assertTrue($status->isEmpty());
+
         $person = factory(Individual::class)
             ->create();
         $data = Individual::first();
@@ -28,6 +32,9 @@ class IndividualTest extends AbstractTest
      */
     public function testGetHrefAttribute()
     {
+        $status = Individual::all();
+        $this->assertTrue($status->isEmpty());
+
         $person = factory(Individual::class)
             ->create();
         $data = Individual::first();
@@ -41,6 +48,9 @@ class IndividualTest extends AbstractTest
      */
     public function testParty()
     {
+        $status = Individual::all();
+        $this->assertTrue($status->isEmpty());
+
         $person = factory(Individual::class)
             ->create();
         $person->party()->create();
@@ -57,6 +67,10 @@ class IndividualTest extends AbstractTest
      */
     public function testTrait()
     {
+
+        $status = Individual::all();
+        $this->assertTrue($status->isEmpty());
+
         $trait = factory(Characteristic::class)
             ->make();
 
@@ -82,6 +96,10 @@ class IndividualTest extends AbstractTest
      */
     public function testContactMedium()
     {
+
+        $status = Individual::all();
+        $this->assertTrue($status->isEmpty());
+
         $type = 'email';
         $person = factory(Individual::class)
             ->create();

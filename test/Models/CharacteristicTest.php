@@ -16,6 +16,11 @@ class CharacteristicTest extends AbstractTest
      */
     public function testTrait()
     {
+
+        $status = Characteristic::all();
+        $this->assertTrue($status->isEmpty());
+
+
         $trait = factory(Characteristic::class)
             ->make();
 

@@ -16,6 +16,11 @@ class ContactMediumTest extends AbstractTest
      */
     public function testMedium()
     {
+
+        $status = ContactMedium::all();
+        $this->assertTrue($status->isEmpty());
+
+
         $type = 'email';
         $person = factory(Individual::class)
             ->create();

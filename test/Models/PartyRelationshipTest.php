@@ -16,6 +16,10 @@ class PartyRelationshipTest extends AbstractTest
      */
     public function testParty()
     {
+
+        $status = PartyRelationship::all();
+        $this->assertTrue($status->isEmpty());
+
         $person = factory(Individual::class)
             ->create();
         $person->party()->create();
