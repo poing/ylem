@@ -3,7 +3,7 @@
 		<nav class="navbar tab-navbar navbar-expand">
 			<div class="navbar-brand font-weight-bold">
 				<i :class="`fa ${isOrg() ? (this.tabInfo.party.isLegalEntity ? 'fa-building' : 'fa-users') : 'fa-user'} mr-2`"></i>
-				{{ isOrg() ? tabInfo.party.isLegalEntity ? tabInfo.party_type.replace('App\\', '') : 'Unit' : tabInfo.party_type.replace('App\\', '') }}
+				{{ isOrg() ? tabInfo.party.isLegalEntity ? tabInfo.party_type.split('\\').pop() : 'Unit' : tabInfo.party_type.split('\\').pop() }}
 			</div>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto"></ul>

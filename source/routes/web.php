@@ -14,10 +14,10 @@ Route::get('/or/{num?}', function ($num = 1) {
     //return PartyRelationship::with('party')->find(1);
 });
 
-Route::any('/stub', 'StubController@stub');
+/* Route::any('/stub', 'StubController@stub'); */
 
 // Create route
-Route::get('/organizations/create', 'OrgController@create');
-Route::get('/tree', 'TreeController@index');
+/* Route::get('/organizations/create', 'OrgController@create'); */
+/* Route::get('/tree', 'TreeController@index'); */
 Route::get('/admin', 'AdminController@index')->name('admin');
 Route::get('/admin/{any}', 'AdminController@index')->name('admin.*');
