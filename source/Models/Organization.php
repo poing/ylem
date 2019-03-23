@@ -13,6 +13,7 @@ use Poing\Ylem\Models\TimePeriod as TimePeriod;
 class Organization extends Model
 {
     use SoftDeletes;
+	protected $with = ['contactMedium'];
     protected $dates = ['deleted_at'];
 
     public static $snakeAttributes = false;

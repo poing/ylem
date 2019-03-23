@@ -26,6 +26,11 @@
 		<div v-if="tabOpen === 1" class="card-body">
 			<Relations :tabData="tabInfo"></Relations>
 		</div>
+
+		<!-- For Email -->
+		<div v-if="tabOpen === 2" class="card-body">
+			<Email :tabData="tabInfo"></Email>
+		</div>
 	</div>
 </template>
 
@@ -34,6 +39,7 @@
 	import Organization from './TabModules/Organization.vue';
 	import Unit from './TabModules/Unit.vue';
 	import Relations from './TabModules/Relations.vue';
+	import Email from './TabModules/Email.vue';
 
 	export default {
 		props: {
@@ -43,11 +49,12 @@
 			Individual,
 			Organization,
 			Unit,
-			Relations
+			Relations,
+			Email
 		},
 		data() {
 			return {
-				tabs: ['Info', 'Relations'],
+				tabs: ['Info', 'Relations', 'Email'],
 				tabOpen: 0
 			}
 		},

@@ -11,6 +11,7 @@ use Poing\Ylem\Models\PartyRelationship as PartyRelationship;
 class Individual extends Model
 {
     use SoftDeletes;
+	protected $with = ['contactMedium'];
     protected $dates = ['deleted_at'];
 
     protected $hidden = [

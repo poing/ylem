@@ -18,6 +18,10 @@ Route::prefix('partyManagement')->group(function() {
 Route::prefix('admin')->group(function() {
 	Route::get('manager/root', 'ManagerController@root');
 	Route::get('manager/children/{id}', 'ManagerController@children');
+	Route::prefix('email')->group(function() {
+		Route::post('store', 'EmailController@store');
+		Route::post('preferred', 'EmailController@preferred');
+	});
 });
 
 Route::get('/tree', 'TreeController@treeData');

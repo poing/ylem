@@ -1,8 +1,8 @@
 <?php
 use Poing\Ylem\Models\Organization;
 use Poing\Ylem\Models\PartyRelationship;
-use Poing\Ylem\Models\Resources\OrganizationResource;
-use Poing\Ylem\Models\Resources\PartyOrgResource;
+use Poing\Ylem\Resources\OrganizationResource;
+use Poing\Ylem\Resources\PartyOrgResource;
 
 Route::get('/oc', function () {
     //return OrganizationResource::collection(Organization::where('type', 'Company')->get());
