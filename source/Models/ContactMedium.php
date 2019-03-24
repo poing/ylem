@@ -7,6 +7,7 @@ use Poing\Ylem\Models\Medium as Medium;
 
 class ContactMedium extends Model
 {
+	protected $with = ['medium'];
     protected $table = 'contact_medium';
 
     protected $fillable = [
