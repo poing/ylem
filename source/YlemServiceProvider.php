@@ -2,8 +2,10 @@
 
 namespace Poing\Ylem;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory as EloquentFactory;
+use Illuminate\Http\Resources\Json\Resource;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\ServiceProvider;
 //use Illuminate\Foundation\AliasLoader;
 //use Poing\Ylem\Facades\Facade as YlemFacade;
 //use Poing\Ylem\Models\Individual as Individual;
@@ -24,6 +26,11 @@ class YlemServiceProvider extends ServiceProvider {
      */
     public function boot() {
 
+        // Remove JSON Wrapping - This is removed: { "data": [] }
+        Resource::withoutWrapping();
+
+        // defaultStringLength from Apifrontend
+        Schema::defaultStringLength(191);
 
         // Load Migrations
         $this->loadMigrationsFrom(__DIR__.'/Database/migrations');
@@ -39,7 +46,7 @@ class YlemServiceProvider extends ServiceProvider {
 		$this->app->register('Poing\Ylem\Providers\YlemRouteServiceProvider');
 
         // Load Web Routes (Figured we don't need this and it creates namespace issues)
-        /* $this->loadRoutesFrom(__DIR__.'/routes/web.php'); */
+        //$this->loadRoutesFrom(__DIR__.'/routes/web.php');
 
 
         //$this->handleConfigs();

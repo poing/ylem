@@ -2,8 +2,8 @@
 
 namespace Poing\Ylem\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
@@ -12,6 +12,6 @@ class AdminController extends Controller
 	 * @return \Illuminate\Http\Response
 	 */
     public function index() {
-    	return view('ylem::admin.index');
+    	return view('admin.index');
     }
 }

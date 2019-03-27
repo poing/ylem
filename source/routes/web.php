@@ -3,6 +3,8 @@ use Poing\Ylem\Models\Organization;
 use Poing\Ylem\Models\PartyRelationship;
 use Poing\Ylem\Resources\OrganizationResource;
 use Poing\Ylem\Resources\PartyOrgResource;
+use Poing\Ylem\Http\Controllers\AdminController;
+
 
 Route::get('/oc', function () {
     //return OrganizationResource::collection(Organization::where('type', 'Company')->get());
@@ -17,7 +19,5 @@ Route::get('/or/{num?}', function ($num = 1) {
 /* Route::any('/stub', 'StubController@stub'); */
 
 // Create route
-/* Route::get('/organizations/create', 'OrgController@create'); */
-/* Route::get('/tree', 'TreeController@index'); */
 Route::get('/admin', 'AdminController@index')->name('admin');
 Route::get('/admin/{any}', 'AdminController@index')->name('admin.*');
