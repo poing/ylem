@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d8d898bd73ddbeca5c42fe1790d7e305",
+    "content-hash": "1dc23fb82a071b830d95eae044875df3",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -2799,6 +2799,39 @@
                 "environment"
             ],
             "time": "2019-01-29T11:11:52+00:00"
+        },
+        {
+            "name": "weblabormx/file-modifier",
+            "version": "v1.3.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weblabormx/File-Modifier.git",
+                "reference": "be9ab5d61e07a6bad581fe237fbf7f7167e9d494"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/weblabormx/File-Modifier/zipball/be9ab5d61e07a6bad581fe237fbf7f7167e9d494",
+                "reference": "be9ab5d61e07a6bad581fe237fbf7f7167e9d494",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "WeblaborMX\\FileModifier\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Carlos Escobar",
+                    "email": "carlosescobar@weblabor.mx"
+                }
+            ],
+            "description": "PHP Library to modify single or masive files.",
+            "time": "2018-06-01T21:47:43+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",

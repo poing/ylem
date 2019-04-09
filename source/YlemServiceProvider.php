@@ -24,6 +24,8 @@ class YlemServiceProvider extends ServiceProvider {
      */
     public function boot() {
 
+        $this->publishes(
+            [__DIR__.'/public' => public_path('ylem')], 'ylem');
 
         // Load Migrations
         $this->loadMigrationsFrom(__DIR__.'/Database/migrations');
@@ -32,6 +34,8 @@ class YlemServiceProvider extends ServiceProvider {
         if ($this->app->runningInConsole()) {
             $this->commands([
                 \Poing\Ylem\Commands\YlemSeeder::class,
+                \Poing\Ylem\Commands\YlemPublish::class,
+                \Poing\Ylem\Commands\YlemVue::class,
             ]);
         }
 
