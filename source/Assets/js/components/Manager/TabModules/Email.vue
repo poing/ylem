@@ -31,7 +31,7 @@
 					<label>Primary Email</label>
 					<div class="input-group">
 						<select v-model="preferredEmail">
-							<option v-for="email in tabData.party.contactMedium" v-if="email.type == 'email'" :value="email.id">
+							<option v-for="email in contactMedium" v-if="email.type == 'email'" :value="email.id">
 								{{ email.medium.emailAddress }}
 							</option>	
 						</select>
