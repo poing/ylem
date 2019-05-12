@@ -53,6 +53,6 @@ class EmailController extends Controller
 			}
 		}
 
-		return new JsonResponse(PartyRelationship::find($request->partyId));
+		return new JsonResponse(PartyRelationship::find($request->partyRelationshipId));
 	}
 }
