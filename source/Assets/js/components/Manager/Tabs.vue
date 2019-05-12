@@ -31,6 +31,15 @@
 		<div v-if="tabOpen === 2" class="card-body">
 			<Email :tabData="tabInfo"></Email>
 		</div>
+
+		<!-- For Postal -->
+		<div v-if="tabOpen === 3" class="card-body">
+			<Postal :tabData="tabInfo"></Postal>
+		</div>
+		
+		<div v-if="tabOpen === 4" class="card-body">
+			<Phone :tabData="tabInfo"></Phone>
+		</div>
 	</div>
 </template>
 
@@ -40,6 +49,8 @@
 	import Unit from './TabModules/Unit.vue';
 	import Relations from './TabModules/Relations.vue';
 	import Email from './TabModules/Email.vue';
+	import Postal from './TabModules/Postal.vue';
+	import Phone from './TabModules/Phone.vue';
 
 	export default {
 		props: {
@@ -50,11 +61,13 @@
 			Organization,
 			Unit,
 			Relations,
-			Email
+			Email,
+			Postal,
+			Phone
 		},
 		data() {
 			return {
-				tabs: ['Info', 'Relations', 'Email'],
+				tabs: ['Info', 'Relations', 'Email', 'Postal', 'Phone'],
 				tabOpen: 0
 			}
 		},
