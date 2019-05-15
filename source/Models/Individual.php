@@ -14,6 +14,8 @@ class Individual extends Model
 	protected $with = ['contactMedium'];
     protected $dates = ['deleted_at'];
 
+    public static $snakeAttributes = false;
+
     protected $hidden = [
         'created_at', 'updated_at', 'deleted_at',
     ];

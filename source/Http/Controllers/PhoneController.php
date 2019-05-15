@@ -9,7 +9,7 @@ use Poing\Ylem\Models\ContactMedium;
 use Poing\Ylem\Models\Medium;
 use Poing\Ylem\Models\PartyRelationship;
 
-class EmailController extends Controller
+class PhoneController extends Controller
 {
 	/**
 	 * @param Illuminate\Http\Request
@@ -21,12 +21,18 @@ class EmailController extends Controller
 		$cm = new ContactMedium();
 		$cm->contact_type = $request->partyType;
 		$cm->contact_id = $request->partyId;
-		$cm->type = "email";
+		$cm->type = "phone";
 		$cm->save();
 
 		// Create a new medium
 		$m = new Medium();
-		$m->emailAddress = $request->email;
+
+		if (property_exists($request, 'type')) {
+			$m->type = $request->type;
+		}
+
+		$m->type = "";
+		$m->number = $request->number;
 		$m->medium_id = $cm->id;
 		$m->save();
 
@@ -39,7 +45,7 @@ class EmailController extends Controller
 	 */
 	public function preferred(Request $request) {
 		$cm = ContactMedium::where('contact_id', $request->partyId)
-							   ->where('type', 'email')
+							   ->where('type', 'phone')
 							   ->where('contact_type', $request->partyType)
 							   ->get();
 
@@ -56,3 +62,5 @@ class EmailController extends Controller
 		return new JsonResponse(PartyRelationship::find($request->partyRelationshipId));
 	}
 }
+
+

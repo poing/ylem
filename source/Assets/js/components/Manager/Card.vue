@@ -14,10 +14,6 @@
 						<i class="fa fa-eye"></i>
 						View Details
 					</a>
-					<a class="dropdown-item" href="#">
-						<i class="fa fa-edit"></i>
-						Edit
-					</a>
 				  </drop-down>
 				  <i v-if="cardInfo.party_type.includes('Organization')" class="fa fa-users mr-2"></i>
 				  <i v-else class="fa fa-user mr-2"></i>

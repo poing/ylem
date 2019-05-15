@@ -25,6 +25,16 @@ Route::prefix('admin')->group(function() {
 		Route::post('store', 'EmailController@store');
 		Route::post('preferred', 'EmailController@preferred');
 	});
+
+	Route::prefix('postal')->group(function() {
+		Route::post('store', 'PostalController@store');
+		Route::post('preferred', 'PostalController@preferred');
+	});
+
+	Route::prefix('phone')->group(function() {
+		Route::post('store', 'PhoneController@store');
+		Route::post('preferred', 'PhoneController@preferred');
+	});
 });
 
 Route::get('/tree', 'TreeController@treeData');

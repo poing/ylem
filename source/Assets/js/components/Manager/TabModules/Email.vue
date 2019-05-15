@@ -31,7 +31,7 @@
 					<label>Primary Email</label>
 					<div class="input-group">
 						<select v-model="preferredEmail">
-							<option v-for="email in tabData.party.contactMedium" v-if="email.type == 'email'" :value="email.id">
+							<option v-for="email in contactMedium" v-if="email.type == 'email'" :value="email.id">
 								{{ email.medium.emailAddress }}
 							</option>	
 						</select>
@@ -75,8 +75,9 @@
 				const self = this;
 				axios.post('/api/admin/email/preferred', {
 					preferredId: self.preferredEmail,
-					partyId: self.tabData.id,
-					partyType: self.tabData.party_type
+					partyId: self.tabData.party_id,
+					partyType: self.tabData.party_type,
+					partyRelationshipId: self.tabData.id
 				}).then(res => {
 					self.contactMedium = res.data.party.contactMedium
 				}).catch(e => {
