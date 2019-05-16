@@ -1,5 +1,5 @@
-![](https://gitlab.com/poing/ylem/badges/master/coverage.svg)
-![](https://gitlab.com/poing/ylem/badges/master/build.svg)
+![](https://gitlab.com/poing/ylem/badges/0.1.1/coverage.svg)
+![](https://gitlab.com/poing/ylem/badges/0.1.1/build.svg)
 
 > **ylem** /ˈiːlɛm/ *noun*
 >
