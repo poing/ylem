@@ -6,9 +6,13 @@
 					<h5 class="font-weight-bold">Email List -</h5>
 					<ul class="list-group">
 						<li v-for="email in contactMedium" v-if="email.type == 'email'" class="list-group-item">
-							{{ email.medium.emailAddress }}
-							<span v-if="email.preferred" class="ml-2 badge badge-success">
+							{{ email.medium.emailAddress }} <br>
+							<span v-if="email.preferred" class="badge badge-success">
 								Primary
+								<i class="fa fa-check"></i>
+							</span>
+							<span v-else class="badge badge-light" @click="updatePreferred(email.id)" style="cursor: pointer;">
+								Set Primary
 								<i class="fa fa-check"></i>
 							</span>
 						</li>
@@ -26,21 +30,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="row mt-4">
-				<div class="col-md-6">
-					<label>Primary Email</label>
-					<div class="input-group">
-						<select v-model="preferredEmail">
-							<option v-for="email in contactMedium" v-if="email.type == 'email'" :value="email.id">
-								{{ email.medium.emailAddress }}
-							</option>	
-						</select>
-						<div class="input-group-append">
-							<button @click="updatePreferred" class="btn btn-success">Save</button>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 </template>
@@ -54,7 +43,6 @@
 			return {
 				newEmail: '',
 				contactMedium: [],
-				preferredEmail: null
 			}
 		},
 		methods: {
@@ -71,15 +59,16 @@
 					console.log(e);
 				});
 			},
-			updatePreferred() {
+			updatePreferred(emailId) {
 				const self = this;
 				axios.post('/api/admin/email/preferred', {
-					preferredId: self.preferredEmail,
+					preferredId: emailId,
 					partyId: self.tabData.party_id,
 					partyType: self.tabData.party_type,
 					partyRelationshipId: self.tabData.id
 				}).then(res => {
 					self.contactMedium = res.data.party.contactMedium
+					self.$parent.$props.tabInfo.party.contactMedium = res.data.party.contactMedium;
 				}).catch(e => {
 					console.log(e);
 				});

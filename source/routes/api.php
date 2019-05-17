@@ -32,6 +32,8 @@ Route::prefix('admin')->group(function() {
 		Route::post('store', 'PhoneController@store');
 		Route::post('preferred', 'PhoneController@preferred');
 	});
+
+	Route::get('/version_info', 'AdminController@getBranchAndVersionInformation');
 });
 
 Route::get('/tree', 'TreeController@treeData');

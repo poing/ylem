@@ -4,15 +4,11 @@
       <div class="row">
         <div class="col-xl-3 col-md-6">
           <stats-card>
-            <div slot="header" class="icon-warning">
-              <i class="nc-icon nc-chart text-warning"></i>
-            </div>
             <div slot="content">
-              <p class="card-category">Capacity</p>
-              <h4 class="card-title">105GB</h4>
-            </div>
-            <div slot="footer">
-              <i class="fa fa-refresh"></i>Updated now
+              <p class="card-category">Version Information</p>
+			  <p>{{ version_information.laravel_version }}</p>
+			  <p>{{ version_information.ylem_version }}</p>
+			  <p>{{ version_information.submodule }}</p>
             </div>
           </stats-card>
         </div>
@@ -115,16 +111,19 @@
       LTable,
       StatsCard
     },
+	mounted() {
+	  axios('/api/admin/version_info')
+		.then(res => {
+			this.version_information = res.data;
+		}).catch(e => {
+			console.error(e);
+		});
+	},
     data () {
       return {
+	    version_information: {},
         editTooltip: 'Edit Task',
         deleteTooltip: 'Remove',
-        pieChart: {
-          data: {
-            labels: ['40%', '20%', '40%'],
-            series: [40, 20, 40]
-          }
-        },
         tableData: {
           data: [
             {title: 'Sign contract for "What are conference organizers afraid of?"', checked: false},

@@ -6,7 +6,7 @@
           <slot name="header"></slot>
         </div>
       </div>
-      <div class="col-7" v-if="$slots.content">
+	  <div :class="{ 'col-7': $slots.footer, 'col-12 pb-2': !$slots.footer }" v-if="$slots.content">
         <div class="numbers">
           <slot name="content"></slot>
         </div>

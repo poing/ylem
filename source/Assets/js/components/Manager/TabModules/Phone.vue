@@ -65,6 +65,7 @@
 					partyRelationshipId: self.tabData.id
 				}).then(res => {
 					self.contactMedium = res.data.party.contactMedium
+					self.$parent.$props.tabInfo.party.contactMedium = res.data.party.contactMedium;
 				}).catch(e => {
 					console.log(e);
 				});
